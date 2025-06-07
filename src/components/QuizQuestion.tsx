@@ -4,7 +4,7 @@ import { useQuiz } from '@/context/QuizContext';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check, X, ChevronLeft, ChevronRight } from 'lucide-react';
-import { questions } from '@/data/quizQuestions';
+import { questions } from '@/data/welshQuizQuestions';
 import SectionNavigation from './SectionNavigation';
 
 interface QuizQuestionProps {
@@ -66,16 +66,12 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({ onQuizEnd }) => {
     setShowCorrectAnimation(true);
   };
 
-  // New function to handle answer selection with auto-checking for single correct answers
   const handleAnswerSelection = (questionId: number, answerIndex: number) => {
     if (isQuestionChecked(questionId)) return;
     
-    // First, select the answer
     selectAnswer(questionId, answerIndex);
     
-    // If it's a single-answer question and the selected answer is correct, auto-check
     if (question && !question.multipleCorrect && question.answers[answerIndex].isCorrect) {
-      // Small timeout to allow the UI to update with the selection first
       setTimeout(() => {
         checkAnswer(questionId);
         setShowCorrectAnimation(true);
@@ -84,7 +80,6 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({ onQuizEnd }) => {
   };
 
   useEffect(() => {
-    // Reset animation state after component updates
     if (isAnimating) {
       setTimeout(() => {
         setIsAnimating(false);
@@ -103,15 +98,15 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({ onQuizEnd }) => {
     const correctStatus = isAnswerCorrect(question.id, answerIndex);
     
     if (!isChecked) {
-      return `${baseClasses} ${isSelected ? 'border-ukblue' : 'border-gray-200 hover:border-gray-400'}`;
+      return `${baseClasses} ${isSelected ? 'border-red-600' : 'border-gray-200 hover:border-gray-400'}`;
     }
     
     if (correctStatus === true) {
-      return `${baseClasses} ${showCorrectAnimation ? 'bg-ukblue text-white border-ukblue animate-scale-in' : 'bg-ukblue text-white border-ukblue'}`;
+      return `${baseClasses} ${showCorrectAnimation ? 'bg-red-600 text-white border-red-600 animate-scale-in' : 'bg-red-600 text-white border-red-600'}`;
     }
     
     if (correctStatus === false && isSelected) {
-      return `${baseClasses} bg-ukred text-white border-ukred`;
+      return `${baseClasses} bg-red-500 text-white border-red-500`;
     }
     
     return `${baseClasses} border-gray-200`;
@@ -125,37 +120,28 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({ onQuizEnd }) => {
 
   const progressPercentage = ((currentQuestionIndex + 1) / questions.length) * 100;
 
-  // Function to get an appropriate icon for the question topic
   const getTopicIcon = () => {
     if (!isChecked || !questionResult) return null;
     
-    // Simple map of keywords to ASCII art/symbols
     const keywords = [
-      { term: 'sausage roll', icon: '🥐' },
-      { term: 'tea', icon: '🍵' },
-      { term: 'beer', icon: '🍺' },
-      { term: 'cake', icon: '🍰' },
-      { term: 'ice cream', icon: '🍦' },
-      { term: 'fish', icon: '🐟' },
-      { term: 'peas', icon: '🌱' },
-      { term: 'potato', icon: '🥔' },
-      { term: 'apple', icon: '🍎' },
+      { term: 'cawl', icon: '🍲' },
       { term: 'cheese', icon: '🧀' },
-      { term: 'chocolate', icon: '🍫' },
-      { term: 'pudding', icon: '🍮' },
-      { term: 'flowerpot', icon: '🪴' },
-      { term: 'badge', icon: '🏅' },
-      { term: 'theme park', icon: '🎢' },
-      { term: 'football', icon: '⚽' },
-      { term: 'plug', icon: '🔌' },
-      { term: 'birds', icon: '🐦' },
-      { term: 'squirrel', icon: '🐿️' },
-      { term: 'owl', icon: '🦉' },
-      { term: 'coin', icon: '💰' },
-      { term: 'shop', icon: '🛒' },
+      { term: 'welsh cakes', icon: '🥞' },
+      { term: 'bara brith', icon: '🍞' },
+      { term: 'laverbread', icon: '🌿' },
+      { term: 'eisteddfod', icon: '🎭' },
+      { term: 'daffodil', icon: '🌼' },
+      { term: 'david', icon: '⛪' },
+      { term: 'snowdon', icon: '🏔️' },
+      { term: 'cardiff', icon: '🏛️' },
+      { term: 'dragon', icon: '🐉' },
+      { term: 'welsh', icon: '🏴󠁧󠁢󠁷󠁬󠁳󠁿' },
+      { term: 'rugby', icon: '🏉' },
+      { term: 'mountain', icon: '⛰️' },
+      { term: 'sheep', icon: '🐑' },
+      { term: 'puffin', icon: '🐧' },
     ];
     
-    // Check if the question or correct answers contain any keywords
     const questionText = question.text.toLowerCase();
     const correctAnswerText = question.answers
       .filter(answer => answer.isCorrect)
@@ -170,16 +156,15 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({ onQuizEnd }) => {
       }
     }
     
-    return '🇬🇧'; // Default icon if no matches
+    return '🏴󠁧󠁢󠁷󠁬󠁳󠁿';
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center p-4 bg-ukgrey">
+    <div className="min-h-screen flex flex-col items-center p-4 bg-red-50">
       <div className="w-full max-w-2xl">
-        {/* Progress and score */}
         <div className="flex justify-between items-center mb-2 text-sm text-gray-600">
           <span>question {currentQuestionIndex + 1} of {questions.length}</span>
-          <div className="px-3 py-1 bg-ukred text-white rounded">
+          <div className="px-3 py-1 bg-red-600 text-white rounded">
             {question.section}
           </div>
           <span>score: {Math.floor(score)}/{totalAttempted}</span>
@@ -187,14 +172,13 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({ onQuizEnd }) => {
 
         <div className="w-full bg-gray-200 h-2 mb-4 rounded-full overflow-hidden">
           <div 
-            className="h-full bg-ukred transition-all duration-300 ease-out"
+            className="h-full bg-red-600 transition-all duration-300 ease-out"
             style={{ width: `${progressPercentage}%` }}
           ></div>
         </div>
 
-        {/* Question card */}
         <Card className={`w-full p-0 overflow-hidden ${animationClass} relative`}>
-          <div className="bg-ukblue text-white p-4">
+          <div className="bg-red-600 text-white p-4">
             <h2 className="text-xl font-semibold">
               {question.text}
             </h2>
@@ -216,7 +200,6 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({ onQuizEnd }) => {
               </div>
             ))}
 
-            {/* Navigation buttons - BEFORE the feedback */}
             <div className="pt-4 flex justify-between">
               <Button 
                 variant="outline" 
@@ -230,14 +213,13 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({ onQuizEnd }) => {
 
               <Button 
                 onClick={isChecked ? handleNextQuestion : handleCheckAnswer}
-                className="bg-ukred hover:bg-red-700 text-white flex items-center gap-1"
+                className="bg-red-600 hover:bg-red-700 text-white flex items-center gap-1"
               >
                 <span>{isChecked ? 'next question' : 'check answer'}</span>
                 {isChecked && <ChevronRight size={16} />}
               </Button>
             </div>
 
-            {/* Feedback - AFTER the navigation buttons */}
             {isChecked && (
               <div className={`mt-4 p-3 border-l-4 rounded bg-gray-50 ${showCorrectAnimation && questionResult ? 'animate-fade-in' : ''}`}>
                 <div className="flex items-center">
@@ -254,7 +236,6 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({ onQuizEnd }) => {
           </div>
         </Card>
 
-        {/* Section navigation */}
         <div className="mt-4">
           <p className="text-sm text-gray-600 mb-1">section:</p>
           <SectionNavigation />

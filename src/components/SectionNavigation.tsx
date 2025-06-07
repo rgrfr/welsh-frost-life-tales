@@ -2,7 +2,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { useQuiz } from '@/context/QuizContext';
-import { quizSections } from '@/data/quizQuestions';
+import { quizSections } from '@/data/welshQuizQuestions';
 
 const SectionNavigation: React.FC = () => {
   const { navigateToSection } = useQuiz();

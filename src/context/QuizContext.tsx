@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { questions, Question } from '../data/quizQuestions';
+import { questions, Question } from '../data/welshQuizQuestions';
 
 interface QuizContextType {
   currentQuestionIndex: number;
@@ -26,12 +26,12 @@ const QuizContext = createContext<QuizContextType | undefined>(undefined);
 export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   // Get saved state from localStorage if available
   const getSavedState = () => {
-    const savedState = localStorage.getItem('quizState');
+    const savedState = localStorage.getItem('welshQuizState');
     if (savedState) {
       try {
         return JSON.parse(savedState);
       } catch (error) {
-        console.error('Error parsing saved quiz state', error);
+        console.error('Error parsing saved Welsh quiz state', error);
       }
     }
     return null;
@@ -47,7 +47,7 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   // Save state to localStorage whenever it changes
   useEffect(() => {
-    localStorage.setItem('quizState', JSON.stringify({
+    localStorage.setItem('welshQuizState', JSON.stringify({
       currentQuestionIndex,
       selectedAnswers,
       checkedQuestions,
@@ -204,7 +204,7 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setCheckedQuestions([]);
     setScore(0);
     setTotalAttempted(0);
-    localStorage.removeItem('quizState');
+    localStorage.removeItem('welshQuizState');
   };
 
   const getScorePercentage = () => {
