@@ -102,7 +102,7 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({ onQuizEnd }) => {
     }
     
     if (correctStatus === true) {
-      return `${baseClasses} ${showCorrectAnimation ? 'bg-red-600 text-white border-red-600 animate-scale-in' : 'bg-red-600 text-white border-red-600'}`;
+      return `${baseClasses} ${showCorrectAnimation ? 'bg-green-600 text-white border-green-600 animate-scale-in' : 'bg-green-600 text-white border-green-600'}`;
     }
     
     if (correctStatus === false && isSelected) {
@@ -221,7 +221,7 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({ onQuizEnd }) => {
             </div>
 
             {isChecked && (
-              <div className={`mt-4 p-3 border-l-4 rounded bg-gray-50 ${showCorrectAnimation && questionResult ? 'animate-fade-in' : ''}`}>
+              <div className={`mt-4 p-3 border-l-4 border-green-600 rounded bg-gray-50 ${showCorrectAnimation && questionResult ? 'animate-fade-in' : ''}`}>
                 <div className="flex items-center">
                   <p className="font-semibold">
                     {questionResult ? "Correct!" : "Incorrect!"}
