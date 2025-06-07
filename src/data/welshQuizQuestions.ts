@@ -1,4 +1,3 @@
-
 export interface Answer {
   text: string;
   isCorrect: boolean;
@@ -15,7 +14,7 @@ export interface Question {
 
 export const quizSections = [
   "food & drink",
-  "culture & customs",
+  "culture & & customs",
   "geography & places", 
   "language & social",
   "nature",
@@ -23,407 +22,483 @@ export const quizSections = [
 ];
 
 export const questions: Question[] = [
-  // Food & Drink
+  // Food & Drink (Bwyd a Diod)
   {
     id: 1,
-    text: "What is cawl?",
+    text: "When offered a bowl of 'cawl' in Wales, what hearty traditional dish are you about to enjoy?",
     answers: [
       { text: "A traditional Welsh stew", isCorrect: true },
-      { text: "A type of Welsh bread", isCorrect: false },
-      { text: "A Welsh musical instrument", isCorrect: false },
-      { text: "A Welsh dance", isCorrect: false }
+      { text: "A type of Welsh sweet bread", isCorrect: false },
+      { text: "A Welsh folk song", isCorrect: false },
+      { text: "A very loud cough", isCorrect: false } // Humorous incorrect answer
     ],
-    explanation: "Cawl is Wales' national dish - a hearty stew traditionally made with lamb or beef and seasonal vegetables!",
+    explanation: "Cawl is Wales' national dish - a hearty stew traditionally made with lamb or beef and seasonal vegetables, perfect on a chilly day!",
     multipleCorrect: false,
     section: "food & drink"
   },
   {
     id: 2,
-    text: "Which cheese is famously Welsh?",
+    text: "Which of these is a traditional Welsh cheese that often gets confused with a bustling Welsh town?",
     answers: [
-      { text: "Cheddar", isCorrect: false },
+      { text: "Wrexham Blue", isCorrect: false },
       { text: "Caerphilly", isCorrect: true },
-      { text: "Stilton", isCorrect: false },
-      { text: "Wensleydale", isCorrect: false }
+      { text: "Holyhead Swiss", isCorrect: false },
+      { text: "Newport Cheddar", isCorrect: false }
     ],
-    explanation: "Caerphilly cheese originates from the Welsh town of Caerphilly and is a traditional Welsh cheese!",
+    explanation: "Caerphilly is a crumbly white cheese, but Caerphilly is also a large town in South Wales, famous for its impressive castle!",
     multipleCorrect: false,
     section: "food & drink"
   },
   {
     id: 3,
-    text: "What are Welsh cakes cooked on?",
+    text: "What makes a traditional Welsh Cake distinct from a scone?",
     answers: [
-      { text: "In an oven", isCorrect: false },
-      { text: "A griddle or bakestone", isCorrect: true },
-      { text: "Over an open fire", isCorrect: false },
-      { text: "In a deep fryer", isCorrect: false }
+      { text: "They are always square shaped", isCorrect: false },
+      { text: "They are cooked on a griddle or bakestone, not baked in an oven", isCorrect: true },
+      { text: "They contain no sugar whatsoever", isCorrect: false },
+      { text: "They are exclusively made by grumpy dragons", isCorrect: false } // Humorous incorrect answer
     ],
-    explanation: "Welsh cakes are traditionally cooked on a bakestone (maen) or griddle, giving them their distinctive flat shape!",
+    explanation: "Welsh cakes are traditional flat, round cakes cooked on a bakestone or griddle, giving them a unique texture and flavor compared to baked scones!",
     multipleCorrect: false,
     section: "food & drink"
   },
   {
     id: 4,
-    text: "What is bara brith?",
+    text: "If a kind Welsh person offers you a slice of 'bara brith,' what delicious treat are they sharing?",
     answers: [
-      { text: "A Welsh fruit bread", isCorrect: true },
-      { text: "A type of Welsh beer", isCorrect: false },
-      { text: "A Welsh vegetable", isCorrect: false },
-      { text: "A Welsh seasoning", isCorrect: false }
+      { text: "A special Welsh lamb sausage", isCorrect: false },
+      { text: "A secret Welsh spell book", isCorrect: false },
+      { text: "Speckled bread (a fruit loaf)", isCorrect: true },
+      { text: "A potent homemade cider", isCorrect: false }
     ],
-    explanation: "Bara brith means 'speckled bread' in Welsh and is a traditional fruit loaf made with tea-soaked dried fruit!",
+    explanation: "Bara brith literally means 'speckled bread' and is a delicious, moist fruit loaf, often made with tea-soaked dried fruit and traditionally served with butter!",
     multipleCorrect: false,
     section: "food & drink"
   },
   {
     id: 5,
-    text: "Which of these is NOT a traditional Welsh dish?",
+    text: "Which of these is definitively *not* a traditional Welsh dish, but might be found in another Celtic nation?",
     answers: [
       { text: "Faggots and peas", isCorrect: false },
       { text: "Laverbread", isCorrect: false },
       { text: "Haggis", isCorrect: true },
-      { text: "Cockles", isCorrect: false }
+      { text: "Cockles and mussels (alive, alive-o!)", isCorrect: false } // Slightly more humourous / specific incorrect
     ],
-    explanation: "Haggis is Scottish, not Welsh! The others are all traditional Welsh foods.",
+    explanation: "Haggis is famously Scottish, not Welsh! Faggots, laverbread, and cockles are all traditional Welsh foods.",
     multipleCorrect: false,
     section: "food & drink"
   },
   {
     id: 6,
-    text: "What is laverbread made from?",
+    text: "Laverbread (bara lawr), a Welsh delicacy, is made from what unexpected ingredient?",
     answers: [
-      { text: "Wheat flour", isCorrect: false },
-      { text: "Seaweed", isCorrect: true },
-      { text: "Oats", isCorrect: false },
-      { text: "Barley", isCorrect: false }
+      { text: "A special type of Welsh potato", isCorrect: false },
+      { text: "Purple seaweed", isCorrect: true },
+      { text: "Finely ground oats", isCorrect: false },
+      { text: "Sheep's wool (don't worry, it's cleaned!)", isCorrect: false } // Humorous incorrect
     ],
-    explanation: "Laverbread (bara lawr) is made from laver seaweed, boiled and minced into a dark green puree - it's considered a Welsh delicacy!",
+    explanation: "Laverbread is made from laver seaweed, boiled and minced into a dark green puree, often eaten fried with bacon and cockles for breakfast!",
     multipleCorrect: false,
     section: "food & drink"
   },
   {
     id: 7,
-    text: "What drink is Wales famous for producing?",
+    text: "While Wales is gaining recognition for its emerging whisky and gin scene, which classic alcoholic beverage has it *long* been famous for producing?",
     answers: [
-      { text: "Whisky", isCorrect: false },
-      { text: "Welsh ale and bitter", isCorrect: true },
-      { text: "Gin", isCorrect: false },
-      { text: "Rum", isCorrect: false }
+      { text: "Sparkling wine (sorry, France!)", isCorrect: false },
+      { text: "Traditional Welsh ale and bitter", isCorrect: true },
+      { text: "Potent fruit schnapps", isCorrect: false },
+      { text: "Bottled dragon's breath", isCorrect: false } // Humorous incorrect
     ],
-    explanation: "Wales has a rich brewing tradition with famous breweries like Brains producing traditional Welsh ales and bitters!",
+    explanation: "Wales has a rich brewing tradition with famous breweries like Brains producing traditional Welsh ales and bitters, enjoyed in pubs across the nation!",
+    multipleCorrect: false,
+    section: "food & drink"
+  },
+  {
+    id: 31, // New ID
+    text: "Which of these ingredients is almost certainly *not* found in a genuine Welsh Oggie (a traditional savoury pastry)?",
+    answers: [
+      { text: "Lamb", isCorrect: false },
+      { text: "Potato", isCorrect: false },
+      { text: "Pineapple", isCorrect: true },
+      { text: "Swede and onion", isCorrect: false }
+    ],
+    explanation: "An Oggie (similar to a Cornish Pasty) is a traditional Welsh savoury pastry, usually filled with lamb, potato, swede, and onion. Pineapple would be a very surprising and untraditional addition!",
     multipleCorrect: false,
     section: "food & drink"
   },
 
-  // Culture & Customs
+  // Culture & Customs (Diwylliant a Dulliau)
   {
     id: 8,
-    text: "What is an Eisteddfod?",
+    text: "What grand annual cultural festival is synonymous with Wales, celebrating its rich heritage of literature, music, and performance?",
     answers: [
-      { text: "A Welsh castle", isCorrect: false },
-      { text: "A cultural festival of literature, music and performance", isCorrect: true },
-      { text: "A type of Welsh hat", isCorrect: false },
-      { text: "A Welsh sport", isCorrect: false }
+      { text: "The Welsh Castle Conundrum", isCorrect: false },
+      { text: "The Eisteddfod", isCorrect: true },
+      { text: "The Great Welsh Sheep Shearing Championships", isCorrect: false },
+      { text: "The Daffodil Derby", isCorrect: false }
     ],
-    explanation: "An Eisteddfod is a Welsh festival celebrating literature, music, and performance. The National Eisteddfod is held annually!",
+    explanation: "The Eisteddfod is a major annual festival of Welsh poetry, music, dance, and drama, with thousands competing and attending!",
     multipleCorrect: false,
     section: "culture & customs"
   },
   {
     id: 9,
-    text: "What is Wales' national flower?",
+    text: "When celebrating Wales' national day, which vibrant flower is proudly pinned to lapels?",
     answers: [
-      { text: "Rose", isCorrect: false },
-      { text: "Thistle", isCorrect: false },
-      { text: "Daffodil", isCorrect: true },
-      { text: "Shamrock", isCorrect: false }
+      { text: "A thorny rose", isCorrect: false },
+      { text: "A spiky thistle", isCorrect: false },
+      { text: "A bright yellow daffodil", isCorrect: true },
+      { text: "A lucky shamrock", isCorrect: false }
     ],
-    explanation: "The daffodil (cenhinen Bedr) is Wales' national flower, worn on St. David's Day!",
+    explanation: "The daffodil (cenhinen Bedr) is the national flower of Wales, famously worn on St. David's Day!",
     multipleCorrect: false,
     section: "culture & customs"
   },
   {
     id: 10,
-    text: "When is St. David's Day?",
+    text: "On which date do Welsh people don their daffodils and celebrate their patron saint, St. David?",
     answers: [
       { text: "March 1st", isCorrect: true },
-      { text: "March 17th", isCorrect: false },
-      { text: "April 23rd", isCorrect: false },
-      { text: "November 30th", isCorrect: false }
+      { text: "March 17th (that's another saint!)", isCorrect: false },
+      { text: "April 23rd (another one!)", isCorrect: false },
+      { text: "November 30th (and another!)", isCorrect: false }
     ],
-    explanation: "St. David's Day (Dydd Gŵyl Dewi) is celebrated on March 1st each year to honor Wales' patron saint!",
+    explanation: "St. David's Day (Dydd Gŵyl Dewi) is celebrated on March 1st each year, a day of Welsh pride and festivities!",
     multipleCorrect: false,
-    section: "culture & customs"
+    section: "culture & & customs"
   },
   {
     id: 11,
-    text: "What is the Welsh national costume traditionally worn by women?",
+    text: "Which of these items would you most likely see as part of a traditional Welsh national costume, especially for women?",
     answers: [
-      { text: "Kilt and sporran", isCorrect: false },
-      { text: "Welsh hat, shawl, and apron", isCorrect: true },
-      { text: "Dirndl", isCorrect: false },
-      { text: "Sari", isCorrect: false }
+      { text: "A flashy kilt and sporran", isCorrect: false },
+      { text: "A tall black hat, warm shawl, and white apron", isCorrect: true },
+      { text: "A Bavarian dirndl with lederhosen", isCorrect: false },
+      { text: "A flowing silk sari", isCorrect: false }
     ],
-    explanation: "The traditional Welsh costume includes a tall black hat, red flannel shawl, and white apron over a long dress!",
+    explanation: "The traditional Welsh costume includes a distinctive tall black hat (often called a 'Welsh hat'), a red flannel shawl, and a white apron over a long dress, historically worn by rural women!",
     multipleCorrect: false,
     section: "culture & customs"
   },
   {
     id: 12,
-    text: "What is the Welsh male voice choir tradition famous for?",
+    text: "What might a world-famous Welsh male voice choir be *least* likely to be caught doing?",
     answers: [
-      { text: "Opera singing", isCorrect: false },
-      { text: "Harmonious choral singing", isCorrect: true },
-      { text: "Rap music", isCorrect: false },
-      { text: "Instrumental music", isCorrect: false }
+      { text: "Belting out a rousing hymn with full gusto", isCorrect: false },
+      { text: "Performing a powerful choral piece in a rugby stadium", isCorrect: false },
+      { text: "Whispering quietly in a monotone for a talent show audition", isCorrect: true },
+      { text: "Winning a major Eisteddfod prize with their harmonious sound", isCorrect: false }
     ],
-    explanation: "Welsh male voice choirs are world-renowned for their powerful harmonious singing, especially of hymns and folk songs!",
+    explanation: "Welsh choirs are famous for their powerful, passionate, and harmonious singing – whispering isn't their style! They're known for their big, impactful sound.",
+    multipleCorrect: false,
+    section: "culture & customs"
+  },
+  {
+    id: 28, // Re-ID to keep flow
+    text: "Which of these is a traditional Welsh sport, similar to hockey, but now less commonly played?",
+    answers: [
+      { text: "Shinty (Scottish)", isCorrect: false },
+      { text: "Bandy (though Cnapan was also played)", isCorrect: true },
+      { text: "Hurling (Irish)", isCorrect: false },
+      { text: "Quidditch (definitely not Welsh)", isCorrect: false } // Humorous incorrect
+    ],
+    explanation: "Bandy was a traditional Welsh ball game played on ice or land. Cnapan was another ancient, often violent, medieval Welsh sport resembling a mass rugby game!",
+    multipleCorrect: false,
+    section: "culture & customs"
+  },
+  {
+    id: 29, // Re-ID to keep flow
+    text: "When Wales plays internationally, which national team takes to the pitch (usually with a lot of singing)?",
+    answers: [
+      { text: "The Welsh Dragons (only on the flag!)", isCorrect: false },
+      { text: "The Wales national rugby union team", isCorrect: true },
+      { text: "The Red Devils (Manchester United, not Wales!)", isCorrect: false },
+      { text: "The Celtic Warriors (a regional club, not national team)", isCorrect: false }
+    ],
+    explanation: "The Wales national rugby union team is the pride of the nation, playing at the Principality Stadium in Cardiff and known for their passionate fans and singing!",
     multipleCorrect: false,
     section: "culture & customs"
   },
 
-  // Geography & Places
+  // Geography & Places (Daearyddiaeth a Lleoedd)
   {
     id: 13,
-    text: "What is the highest mountain in Wales?",
+    text: "What is the highest mountain in Wales, often shrouded in mist and legend?",
     answers: [
-      { text: "Ben Nevis", isCorrect: false },
+      { text: "Ben Nevis (that's Scottish!)", isCorrect: false },
       { text: "Snowdon (Yr Wyddfa)", isCorrect: true },
-      { text: "Scafell Pike", isCorrect: false },
-      { text: "Pen y Fan", isCorrect: false }
+      { text: "Scafell Pike (that's English!)", isCorrect: false },
+      { text: "Pen y Fan (a worthy challenger, but not the highest!)", isCorrect: false }
     ],
-    explanation: "Snowdon (Yr Wyddfa in Welsh) is Wales' highest peak at 1,085 meters in the Snowdonia National Park!",
+    explanation: "Snowdon (Yr Wyddfa in Welsh), located in Snowdonia National Park, is Wales' highest peak at 1,085 meters and a popular hiking destination!",
     multipleCorrect: false,
     section: "geography & places"
   },
   {
     id: 14,
-    text: "Which city is the capital of Wales?",
+    text: "Which vibrant and rapidly developing city holds the prestigious title of Wales' capital?",
     answers: [
-      { text: "Swansea", isCorrect: false },
+      { text: "Swansea (a great city, but not the capital)", isCorrect: false },
       { text: "Cardiff", isCorrect: true },
-      { text: "Newport", isCorrect: false },
-      { text: "Wrexham", isCorrect: false }
+      { text: "Newport (known for its Transporter Bridge!)", isCorrect: false },
+      { text: "Wrexham (now globally famous for football!)", isCorrect: false }
     ],
-    explanation: "Cardiff (Caerdydd) has been the capital city of Wales since 1955!",
+    explanation: "Cardiff (Caerdydd) has been the capital city of Wales since 1955, boasting a castle, waterfront, and a buzzing city centre!",
     multipleCorrect: false,
     section: "geography & places"
   },
   {
     id: 15,
-    text: "What is the longest place name in Europe?",
+    text: "Which Welsh place name is famous for being incredibly long and a tongue-twister for most non-Welsh speakers?",
     answers: [
       { text: "Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch", isCorrect: true },
-      { text: "Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu", isCorrect: false },
-      { text: "Krungthepmahanakhon", isCorrect: false },
-      { text: "Chargoggagoggmanchauggagoggchaubunagungamaugg", isCorrect: false }
+      { text: "Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu (that's New Zealand!)", isCorrect: false },
+      { text: "Krungthepmahanakhon (that's Bangkok's ceremonial name!)", isCorrect: false },
+      { text: "Chargoggagoggmanchauggagoggchaubunagungamaugg (that's in the USA!)", isCorrect: false }
     ],
-    explanation: "This Welsh village name has 58 letters and was created as a publicity stunt in the 1860s!",
+    explanation: "This village on Anglesey holds the record for the longest place name in Europe, deliberately created as a publicity stunt to attract tourists in the 1860s!",
     multipleCorrect: false,
     section: "geography & places"
   },
   {
     id: 16,
-    text: "Which Welsh coastline is famous for its dramatic cliffs?",
+    text: "Which spectacular Welsh coastline is celebrated for its dramatic cliffs, golden beaches, and the UK's only coastal National Park?",
     answers: [
-      { text: "Pembrokeshire Coast", isCorrect: true },
-      { text: "Jurassic Coast", isCorrect: false },
-      { text: "Giant's Causeway", isCorrect: false },
-      { text: "White Cliffs of Dover", isCorrect: false }
+      { text: "The Jurassic Coast (that's England!)", isCorrect: false },
+      { text: "The Pembrokeshire Coast", isCorrect: true },
+      { text: "The Giant's Causeway (that's Northern Ireland!)", isCorrect: false },
+      { text: "The White Cliffs of Dover (also England!)", isCorrect: false }
     ],
-    explanation: "The Pembrokeshire Coast Path offers some of the most spectacular coastal scenery in Britain!",
+    explanation: "The Pembrokeshire Coast Path offers some of the most spectacular coastal scenery in Britain, forming the Pembrokeshire Coast National Park!",
     multipleCorrect: false,
     section: "geography & places"
   },
   {
     id: 17,
-    text: "What type of landscape is the Brecon Beacons known for?",
+    text: "What kind of rugged, wild landscape is the Brecon Beacons National Park primarily known for?",
     answers: [
-      { text: "Flat farmland", isCorrect: false },
-      { text: "Mountain peaks and moorland", isCorrect: true },
-      { text: "Dense forests", isCorrect: false },
-      { text: "Desert terrain", isCorrect: false }
+      { text: "Endless flat farmland, perfect for tractors", isCorrect: false },
+      { text: "Rolling mountain peaks, expansive moorland, and glistening reservoirs", isCorrect: true },
+      { text: "Dense, impenetrable forests (though it has some!)", isCorrect: false },
+      { text: "Arid desert terrain (definitely not Wales!)", isCorrect: false }
     ],
-    explanation: "The Brecon Beacons National Park is famous for its dramatic mountain peaks, including Pen y Fan!",
+    explanation: "The Brecon Beacons National Park is famous for its dramatic mountain peaks (like Pen y Fan), sweeping moorland, and beautiful glaciated valleys, making it ideal for hiking!",
+    multipleCorrect: false,
+    section: "geography & places"
+  },
+  {
+    id: 30, // Re-ID to keep flow
+    text: "You've just crossed the border from England into Wales via a famous bridge. What is its Welsh name?",
+    answers: [
+      { text: "Pont Menai (that's Anglesey!)", isCorrect: false },
+      { text: "Pont Hafren", isCorrect: true },
+      { text: "Pont Britannia (another Anglesey bridge!)", isCorrect: false },
+      { text: "Pont Tywi (a river bridge!)", isCorrect: false }
+    ],
+    explanation: "Pont Hafren is the Welsh name for the Severn Bridge, a iconic crossing that welcomes you to Wales!",
     multipleCorrect: false,
     section: "geography & places"
   },
 
-  // Language & Social
+  // Language & Social (Iaith a Chymdeithasol)
   {
     id: 18,
-    text: "What does 'Cymru' mean?",
+    text: "If you want to refer to Wales in its own language, what word would you use?",
     answers: [
-      { text: "Hello", isCorrect: false },
-      { text: "Wales", isCorrect: true },
-      { text: "Thank you", isCorrect: false },
-      { text: "Goodbye", isCorrect: false }
+      { text: "Hello (that's 'Shwmae'!)", isCorrect: false },
+      { text: "Cymru", isCorrect: true },
+      { text: "Thank you (that's 'Diolch'!)", isCorrect: false },
+      { text: "Goodbye (that's 'Hwyl fawr'!)", isCorrect: false }
     ],
-    explanation: "Cymru is the Welsh name for Wales, and Welsh people are called Cymry!",
+    explanation: "Cymru is the Welsh name for Wales, and Welsh people are called Cymry. It's a key part of Welsh identity!",
     multipleCorrect: false,
     section: "language & social"
   },
   {
     id: 19,
-    text: "How do you say 'hello' in Welsh?",
+    text: "What is a common, informal way to say 'hello' or 'how are you?' in Welsh, especially in the South?",
     answers: [
+      { text: "Bore da (good morning!)", isCorrect: false },
       { text: "Shwmae", isCorrect: true },
-      { text: "Bore da", isCorrect: false },
-      { text: "Nos da", isCorrect: false },
-      { text: "Hwyl fawr", isCorrect: false }
+      { text: "Nos da (good night!)", isCorrect: false },
+      { text: "Hwyl fawr (goodbye!)", isCorrect: false }
     ],
-    explanation: "Shwmae (or Sut mae) is a common informal greeting meaning 'hello' or 'how are you?'",
+    explanation: "Shwmae (or Sut mae) is a common informal greeting in Welsh, often used in conversations like 'Shwmae, bach!'",
     multipleCorrect: false,
     section: "language & social"
   },
   {
     id: 20,
-    text: "What does 'Croeso i Gymru' mean?",
+    text: "You see a sign at the border that says 'Croeso i Gymru'. What warm message is it conveying?",
     answers: [
-      { text: "Welcome to Wales", isCorrect: true },
       { text: "Goodbye from Wales", isCorrect: false },
+      { text: "Welcome to Wales", isCorrect: true },
       { text: "Made in Wales", isCorrect: false },
-      { text: "Welsh language", isCorrect: false }
+      { text: "Speak Welsh!", isCorrect: false }
     ],
-    explanation: "Croeso i Gymru means 'Welcome to Wales' - you'll see this on road signs at the Welsh border!",
+    explanation: "Croeso i Gymru means 'Welcome to Wales' - a friendly greeting you'll see on road signs as you enter the country!",
     multipleCorrect: false,
     section: "language & social"
   },
   {
     id: 21,
-    text: "What percentage of people in Wales can speak Welsh?",
+    text: "Approximately what percentage of the Welsh population can speak the Welsh language, according to recent census data?",
     answers: [
-      { text: "About 10%", isCorrect: false },
-      { text: "About 30%", isCorrect: true },
-      { text: "About 50%", isCorrect: false },
-      { text: "About 70%", isCorrect: false }
+      { text: "Fewer than 5% (not true!)", isCorrect: false },
+      { text: "Around 30%", isCorrect: true },
+      { text: "Over 60% (we wish!)", isCorrect: false },
+      { text: "Everyone, it's compulsory! (also not true)", isCorrect: false }
     ],
-    explanation: "According to recent census data, about 30% of the Welsh population can speak Welsh!",
+    explanation: "According to recent census data, about 30% of the Welsh population can speak Welsh, a figure that the Welsh government is actively working to increase!",
+    multipleCorrect: false,
+    section: "language & social"
+  },
+  {
+    id: 32, // New ID
+    text: "When a Welsh person says 'diolch', what common courtesy are they extending?",
+    answers: [
+      { text: "They're complaining about the rain (highly likely, but not 'diolch'!)", isCorrect: false },
+      { text: "They're asking for another pint of ale", isCorrect: false },
+      { text: "They're saying 'thank you'", isCorrect: true },
+      { text: "They're greeting you with a hug", isCorrect: false }
+    ],
+    explanation: "'Diolch' means 'thank you' in Welsh. It's a simple but appreciated word to learn when visiting!",
+    multipleCorrect: false,
+    section: "language & social"
+  },
+  {
+    id: 33, // New ID
+    text: "What does 'Hwyl' (pronounced hoo-eel) most closely represent in Welsh culture, often felt during a good sing-song?",
+    answers: [
+      { text: "A small, traditional Welsh boat", isCorrect: false },
+      { text: "A deep sense of passionate enthusiasm, fun, or zest", isCorrect: true },
+      { text: "A type of melancholy Welsh folk song", isCorrect: false },
+      { text: "A grumpy, sulking mood", isCorrect: false }
+    ],
+    explanation: "'Hwyl' is a uniquely Welsh concept, describing a deep feeling of emotional passion, often associated with powerful singing, communal spirit, or a great atmosphere. You might hear 'Hwyl Fawr!' for a passionate goodbye too!",
+    multipleCorrect: false,
+    section: "language & social"
+  },
+  {
+    id: 34, // New ID
+    text: "Which of these terms is a common, often affectionate, way you might hear a Welsh person address someone, especially in the South?",
+    answers: [
+      { text: "'Matey' (too English!)", isCorrect: false },
+      { text: "'Chum' (too old-fashioned!)", isCorrect: false },
+      { text: "'Boyo'", isCorrect: true },
+      { text: "'Old Bean' (very English!)", isCorrect: false }
+    ],
+    explanation: "'Boyo' is a colloquial and often endearing term for a man or boy, particularly associated with South Wales, used much like 'mate' or 'pal'.",
     multipleCorrect: false,
     section: "language & social"
   },
 
-  // Nature
+  // Nature (Natur)
   {
     id: 22,
-    text: "Which animal appears on the Welsh flag?",
+    text: "Which mythical (or not so mythical, if you believe!) creature proudly appears on the Welsh flag?",
     answers: [
-      { text: "Lion", isCorrect: false },
-      { text: "Dragon", isCorrect: true },
-      { text: "Eagle", isCorrect: false },
-      { text: "Unicorn", isCorrect: false }
+      { text: "A majestic lion", isCorrect: false },
+      { text: "A fearsome red dragon", isCorrect: true },
+      { text: "A soaring eagle", isCorrect: false },
+      { text: "A sparkly unicorn (that's Scottish!)", isCorrect: false }
     ],
-    explanation: "The red dragon (Y Ddraig Goch) is the symbol of Wales and appears on the Welsh flag!",
+    explanation: "The red dragon (Y Ddraig Goch) is the vibrant, ancient symbol of Wales and appears prominently on the Welsh flag!",
     multipleCorrect: false,
     section: "nature"
   },
   {
     id: 23,
-    text: "Which seabird is common on Welsh coastal cliffs?",
+    text: "Which distinctive, colourful seabird with a clown-like beak is a common sight on Welsh coastal cliffs, particularly on its islands?",
     answers: [
-      { text: "Penguin", isCorrect: false },
-      { text: "Puffin", isCorrect: true },
-      { text: "Flamingo", isCorrect: false },
-      { text: "Ostrich", isCorrect: false }
+      { text: "A fluffy penguin (wrong hemisphere!)", isCorrect: false },
+      { text: "A charming puffin", isCorrect: true },
+      { text: "A graceful flamingo (too warm!)", isCorrect: false },
+      { text: "A rather tall ostrich (definitely not!)", isCorrect: false }
     ],
-    explanation: "Puffins nest on Welsh coastal cliffs, particularly on islands like Skomer and Skokholm!",
+    explanation: "Puffins nest in large colonies on Welsh coastal cliffs, particularly on islands like Skomer and Skokholm, returning each spring to breed!",
     multipleCorrect: false,
     section: "nature"
   },
   {
     id: 24,
-    text: "What type of sheep is Wales famous for?",
+    text: "What common farm animal is so iconic in Wales that it's often jokingly said to outnumber the human population?",
     answers: [
-      { text: "Highland sheep", isCorrect: false },
-      { text: "Welsh Mountain sheep", isCorrect: true },
-      { text: "Merino sheep", isCorrect: false },
-      { text: "Suffolk sheep", isCorrect: false }
+      { text: "The mighty Welsh Black cattle", isCorrect: false },
+      { text: "The ubiquitous Welsh Mountain sheep", isCorrect: true },
+      { text: "The plump Welsh Pig", isCorrect: false },
+      { text: "The shaggy Highland cow (that's Scottish!)", isCorrect: false }
     ],
-    explanation: "Welsh Mountain sheep are hardy breeds perfectly adapted to the Welsh hills and mountains!",
+    explanation: "Wales is famous for its vast numbers of hardy Welsh Mountain sheep, which graze across its hills and mountains, leading to the playful joke!",
+    multipleCorrect: false,
+    section: "nature"
+  },
+  {
+    id: 35, // New ID
+    text: "Which of these exotic animals is absolutely *not* native to the wild Welsh countryside?",
+    answers: [
+      { text: "The majestic Red Kite (a true Welsh success story!)", isCorrect: false },
+      { text: "The sturdy Welsh Mountain Pony", isCorrect: false },
+      { text: "The colourful Puffin (seen on coasts!)", isCorrect: false },
+      { text: "A hopping kangaroo", isCorrect: true }
+    ],
+    explanation: "While Wales boasts stunning wildlife, kangaroos are native to Australia, not the valleys and mountains of Wales!",
     multipleCorrect: false,
     section: "nature"
   },
 
-  // Shops & Commerce  
+  // Shops & Commerce (Siopau a Masnach)
   {
     id: 25,
-    text: "Which supermarket chain originated in Wales?",
+    text: "Which popular supermarket chain, known for its frozen food, has its origins strongly tied to Wales, despite its name?",
     answers: [
-      { text: "Tesco", isCorrect: false },
-      { text: "Morrisons", isCorrect: false },
+      { text: "Tesco (too big!)", isCorrect: false },
+      { text: "Morrisons (Northern English!)", isCorrect: false },
       { text: "Iceland", isCorrect: true },
-      { text: "ASDA", isCorrect: false }
+      { text: "ASDA (another Northern English one!)", isCorrect: false }
     ],
-    explanation: "Iceland supermarket was founded in Oswestry on the Welsh border and has strong Welsh connections!",
+    explanation: "Iceland Foods was founded in Oswestry, close to the Welsh border, and has deep roots and a large presence in Wales!",
     multipleCorrect: false,
     section: "shops & commerce"
   },
   {
     id: 26,
-    text: "What is a traditional Welsh market called?",
+    text: "If you're looking for local produce, crafts, or a good bargain in Wales, what would a traditional market be called in Welsh?",
     answers: [
-      { text: "Bazaar", isCorrect: false },
-      { text: "Marchnad", isCorrect: true },
-      { text: "Souk", isCorrect: false },
-      { text: "Feira", isCorrect: false }
+      { text: "A bustling 'Bazaar' (too Middle Eastern!)", isCorrect: false },
+      { text: "A 'Marchnad'", isCorrect: true },
+      { text: "A vibrant 'Souk' (also Middle Eastern!)", isCorrect: false },
+      { text: "A colourful 'Feira' (that's Portuguese!)", isCorrect: false }
     ],
-    explanation: "Marchnad is the Welsh word for market - many Welsh towns have traditional markets dating back centuries!",
+    explanation: "Marchnad is the Welsh word for market – many Welsh towns like Cardiff and Swansea have traditional markets dating back centuries!",
     multipleCorrect: false,
     section: "shops & commerce"
   },
   {
     id: 27,
-    text: "Which of these is a famous Welsh department store?",
+    text: "Which of these was a famous, long-standing department store in Cardiff, a landmark for shoppers?",
     answers: [
-      { text: "Harrods", isCorrect: false },
+      { text: "Harrods (that's London!)", isCorrect: false },
       { text: "Howells", isCorrect: true },
-      { text: "Selfridges", isCorrect: false },
-      { text: "Harvey Nichols", isCorrect: false }
+      { text: "Selfridges (also London!)", isCorrect: false },
+      { text: "Harvey Nichols (London and major cities!)", isCorrect: false }
     ],
-    explanation: "Howells was a famous department store in Cardiff, though it has since closed!",
+    explanation: "Howells was a beloved department store in Cardiff's city centre for over a century, although it has since closed and is now a House of Fraser!",
     multipleCorrect: false,
     section: "shops & commerce"
   },
-
-  // Additional Welsh Culture Questions
   {
-    id: 28,
-    text: "What is the traditional Welsh sport similar to hockey?",
+    id: 36, // New ID
+    text: "Which of these items would you be *least* likely to find for sale at a traditional Welsh market stall?",
     answers: [
-      { text: "Shinty", isCorrect: false },
-      { text: "Bandy", isCorrect: true },
-      { text: "Hurling", isCorrect: false },
-      { text: "Cnapan", isCorrect: false }
+      { text: "Freshly made Welsh laverbread", isCorrect: false },
+      { text: "A hand-knitted Welsh wool jumper", isCorrect: false },
+      { text: "A full set of scuba diving gear", isCorrect: true },
+      { text: "A genuine Welsh slate coaster", isCorrect: false }
     ],
-    explanation: "Bandy was a traditional Welsh ball game, though Cnapan was also played in medieval Wales!",
+    explanation: "Welsh markets are famous for local produce, crafts, and traditional items, but you'd be hard-pressed to find specialized sports equipment like scuba gear there!",
     multipleCorrect: false,
-    section: "culture & customs"
+    section: "shops & commerce"
   },
-  {
-    id: 29,
-    text: "Which rugby team represents Wales internationally?",
-    answers: [
-      { text: "The Welsh Dragons", isCorrect: false },
-      { text: "Wales national rugby union team", isCorrect: true },
-      { text: "The Red Devils", isCorrect: false },
-      { text: "Celtic Warriors", isCorrect: false }
-    ],
-    explanation: "The Wales national rugby union team plays at the Principality Stadium in Cardiff and competes in the Six Nations!",
-    multipleCorrect: false,
-    section: "culture & customs"
-  },
-  {
-    id: 30,
-    text: "What is the Welsh name for the Severn Bridge?",
-    answers: [
-      { text: "Pont Hafren", isCorrect: true },
-      { text: "Pont Menai", isCorrect: false },
-      { text: "Pont Britannia", isCorrect: false },
-      { text: "Pont Tywi", isCorrect: false }
-    ],
-    explanation: "Pont Hafren is the Welsh name for the Severn Bridge, connecting Wales and England!",
-    multipleCorrect: false,
-    section: "geography & places"
-  }
 ];

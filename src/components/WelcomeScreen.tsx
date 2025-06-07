@@ -53,7 +53,7 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStartQuiz }) => {
         <CardFooter className="flex justify-center pb-6">
           <Button 
             onClick={handleStartQuiz}
-            className="bg-red-600 hover:bg-red-700 text-white w-full max-w-xs"
+            className="bg-green-600 hover:bg-green-700 text-white w-full max-w-xs"
           >
             start quiz
           </Button>
