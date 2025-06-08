@@ -56,18 +56,18 @@ const CreditsDialog: React.FC<CreditsDialogProps> = ({
           </div>
           
           <p>
-            This quiz was derived from our 'alternative route to UK citizenship' quiz 
+            This quiz was derived from our 'alternative route to UK citizenship' quiz  
               <a
               href="https://oli-frost-uk-life-quiz.lovable.app/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-blue-600 hover:underline inline-flex items-center"
             >
-              Life in the UK <ExternalLink className="ml-1 h-3 w-3" />
+               Life in the UK <ExternalLink className="ml-1 h-3 w-3" />
               </a>
           </p>
           <p>
-            (which was written by Oli F - more of his work:
+             which was written by Oli Frost - see his work:
               <a 
               href="https://olifro.st" 
               target="_blank" 
