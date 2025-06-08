@@ -56,7 +56,7 @@ const CreditsDialog: React.FC<CreditsDialogProps> = ({
           </div>
           
           <p>
-            This quiz was derived from our 'alternative route to UK citizenship' quiz  
+            This quiz was derived from our 'alternative route to UK citizenship' quiz -    
               <a
               href="https://oli-frost-uk-life-quiz.lovable.app/" 
               target="_blank" 
@@ -67,7 +67,7 @@ const CreditsDialog: React.FC<CreditsDialogProps> = ({
               </a>
           </p>
           <p>
-             which was written by Oli Frost - see his work:
+             which was written by Oli Frost while his dad, Roger F made the app in lovable.dev. See Oli's work:-  
               <a 
               href="https://olifro.st" 
               target="_blank" 
@@ -78,7 +78,7 @@ const CreditsDialog: React.FC<CreditsDialogProps> = ({
               </a>
           </p>
           <p>
-            His dad, Roger F made the app in lovable.dev  
+              
             {/* <a 
               href="https://rogerfrost.com" 
               target="_blank" 
