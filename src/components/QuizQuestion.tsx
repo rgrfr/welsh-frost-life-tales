@@ -71,12 +71,7 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({ onQuizEnd }) => {
     
     selectAnswer(questionId, answerIndex);
     
-    if (question && !question.multipleCorrect && question.answers[answerIndex].isCorrect) {
-      setTimeout(() => {
-        checkAnswer(questionId);
-        setShowCorrectAnimation(true);
-      }, 150);
-    }
+    // Remove auto-check functionality - user must click "check answer" button
   };
 
   useEffect(() => {
@@ -98,7 +93,7 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({ onQuizEnd }) => {
     const correctStatus = isAnswerCorrect(question.id, answerIndex);
     
     if (!isChecked) {
-      return `${baseClasses} ${isSelected ? 'border-red-600' : 'border-gray-200 hover:border-gray-400'}`;
+      return `${baseClasses} ${isSelected ? 'border-red-600 bg-red-50' : 'border-gray-200 hover:border-gray-400'}`;
     }
     
     if (correctStatus === true) {
@@ -213,6 +208,7 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({ onQuizEnd }) => {
 
               <Button 
                 onClick={isChecked ? handleNextQuestion : handleCheckAnswer}
+                disabled={!isChecked && !isAnswerSelected(question.id, 0) && !isAnswerSelected(question.id, 1) && !isAnswerSelected(question.id, 2) && !isAnswerSelected(question.id, 3)}
                 className="bg-red-600 hover:bg-red-700 text-white flex items-center gap-1"
               >
                 <span>{isChecked ? 'next question' : 'check answer'}</span>

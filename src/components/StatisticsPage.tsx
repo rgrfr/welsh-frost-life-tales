@@ -35,14 +35,14 @@ const StatisticsPage: React.FC = () => {
     const fetchStatistics = async () => {
       setLoading(true);
       
-      // Fetch all attempts
+      // Fetch all Welsh quiz attempts
       const { data: attempts } = await supabase
-        .from('quiz_attempts')
+        .from('welsh_quiz_attempts')
         .select('*');
         
-      // Fetch all question results
+      // Fetch all Welsh question results
       const { data: questionResults } = await supabase
-        .from('question_results')
+        .from('welsh_question_results')
         .select('*');
       
       if (attempts && questionResults) {
@@ -132,15 +132,15 @@ const StatisticsPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center p-4 bg-ukgrey">
+    <div className="min-h-screen flex flex-col items-center p-4 bg-red-50">
       <div className="w-full max-w-4xl">
-        <Card className="w-full border-2 border-ukblue shadow-lg mb-4">
-          <CardHeader className="bg-ukblue text-white">
+        <Card className="w-full border-2 border-red-600 shadow-lg mb-4">
+          <CardHeader className="bg-red-600 text-white">
             <div className="flex items-center">
               <Button 
                 variant="ghost" 
                 size="icon" 
-                className="text-white hover:bg-blue-800 mr-4"
+                className="text-white hover:bg-red-800 mr-4"
                 onClick={handleBackToResults}
               >
                 <ArrowLeft />
@@ -148,7 +148,7 @@ const StatisticsPage: React.FC = () => {
               <div>
                 <CardTitle className="text-2xl">population statistics</CardTitle>
                 <CardDescription className="text-gray-200">
-                  How you compare with other quiz takers
+                  How you compare with other Life in Wales quiz takers
                 </CardDescription>
               </div>
             </div>
@@ -159,7 +159,7 @@ const StatisticsPage: React.FC = () => {
               <div className="text-center p-10">loading statistics...</div>
             ) : statistics.totalAttempts === 0 ? (
               <div className="text-center p-10">
-                No quiz data yet. Complete a quiz to see statistics!
+                No Welsh quiz data yet. Complete a quiz to see statistics!
               </div>
             ) : (
               <div className="space-y-8">
@@ -200,7 +200,7 @@ const StatisticsPage: React.FC = () => {
                             <YAxis dataKey="name" type="category" width={120} />
                             <Tooltip content={<ChartTooltipContent />} />
                             <Legend />
-                            <Bar dataKey="percentage" name="Correct %" fill="#0A3161" />
+                            <Bar dataKey="percentage" name="Correct %" fill="#DC2626" />
                           </BarChart>
                         </ChartContainer>
                       </div>
@@ -238,7 +238,7 @@ const StatisticsPage: React.FC = () => {
           
           <CardFooter className="flex justify-center pb-6 pt-2">
             <Button 
-              className="bg-ukred hover:bg-red-700 text-white"
+              className="bg-red-600 hover:bg-red-700 text-white"
               onClick={handleBackToResults}
             >
               back to results

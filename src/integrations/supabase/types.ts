@@ -124,6 +124,30 @@ export type Database = {
         }
         Relationships: []
       }
+      slideshow_configs: {
+        Row: {
+          config: Json
+          created_at: string
+          id: string
+          name: string
+          updated_at: string
+        }
+        Insert: {
+          config: Json
+          created_at?: string
+          id?: string
+          name?: string
+          updated_at?: string
+        }
+        Update: {
+          config?: Json
+          created_at?: string
+          id?: string
+          name?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       welsh_feedback: {
         Row: {
           attempt_id: string | null

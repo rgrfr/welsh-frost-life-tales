@@ -21,7 +21,7 @@ const FeedbackDisplay: React.FC = () => {
     const fetchFeedback = async () => {
       try {
         const { data, error } = await supabase
-          .from('feedback')
+          .from('welsh_feedback')
           .select('*')
           .eq('is_approved', true)
           .order('created_at', { ascending: false })
@@ -31,7 +31,7 @@ const FeedbackDisplay: React.FC = () => {
         
         setFeedbackItems(data as FeedbackItem[]);
       } catch (err) {
-        console.error('Error fetching feedback:', err);
+        console.error('Error fetching Welsh feedback:', err);
         setError('Failed to load comments. Please try again later.');
       } finally {
         setLoading(false);
