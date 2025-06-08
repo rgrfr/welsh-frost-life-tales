@@ -44,7 +44,7 @@ const CreditsDialog: React.FC<CreditsDialogProps> = ({
             <Link to="/statistics" className="group">
               <img 
                 src="/og-image.png" 
-                alt="UK Life Quiz" 
+                alt="Welsh Life Quiz logo" 
                 className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 cursor-pointer group-hover:opacity-90 max-w-full h-auto"
                 style={{ maxHeight: '200px' }}
               />
@@ -56,22 +56,29 @@ const CreditsDialog: React.FC<CreditsDialogProps> = ({
           </div>
           
           <p>
-            This quiz was made to test the street-credibility of Ella, a frequent visitor from the USA, after 
-            studying in the UK for several months in 2025. But then, without any agenda we thought to give it a wider audience.
+            This quiz was derived from our 'alternative route to UK citizenship' quiz 
+              <a
+              href="https://oli-frost-uk-life-quiz.lovable.app/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline inline-flex items-center"
+            >
+              Life in the UK <ExternalLink className="ml-1 h-3 w-3" />
+              </a>
           </p>
           <p>
-            Oli F wrote it although he'd sooner be imploring those able to avert a climate crisis to get on with it - see his 
-            work and award-winning songs at <a 
+            (which was written by Oli F - more of his work:
+              <a 
               href="https://olifro.st" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-blue-600 hover:underline inline-flex items-center"
             >
               olifro.st <ExternalLink className="ml-1 h-3 w-3" />
-            </a>.
+              </a>
           </p>
           <p>
-            His dad, Roger F made the app in lovable.dev - otherwise he dabbles in home automation and sensors  
+            His dad, Roger F made the app in lovable.dev  
             {/* <a 
               href="https://rogerfrost.com" 
               target="_blank" 
