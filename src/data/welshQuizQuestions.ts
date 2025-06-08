@@ -30,7 +30,7 @@ export const questions: Question[] = [
       { text: "A traditional Welsh stew", isCorrect: true },
       { text: "A type of Welsh sweet bread", isCorrect: false },
       { text: "A Welsh musical instrument", isCorrect: false },
-      { text: "A very loud cough", isCorrect: false }
+      { text: "A Welsh doner kebab", isCorrect: false }
     ],
     explanation: "Cawl is Wales' national dish - a hearty stew traditionally made with lamb or beef and seasonal vegetables, perfect on a chilly day!",
     multipleCorrect: false,
@@ -56,7 +56,7 @@ export const questions: Question[] = [
       { text: "They are always square shaped", isCorrect: false },
       { text: "They are cooked on a griddle or bakestone, not baked in an oven", isCorrect: true },
       { text: "They contain no sugar whatsoever", isCorrect: false },
-      { text: "They must only be eaten with a tiny fork", isCorrect: false }
+      { text: "They are eaten with a tiny fork", isCorrect: false }
     ],
     explanation: "Welsh cakes are traditional flat, round cakes cooked on a bakestone or griddle, giving them a unique texture and flavor compared to baked scones!",
     multipleCorrect: false,
@@ -68,7 +68,7 @@ export const questions: Question[] = [
     answers: [
       { text: "A special Welsh lamb sausage", isCorrect: false },
       { text: "A secret Welsh spell book", isCorrect: false },
-      { text: "Speckled bread (a fruit loaf)", isCorrect: true },
+      { text: "A fruit loaf", isCorrect: true },
       { text: "A potent homemade cider", isCorrect: false }
     ],
     explanation: "Bara brith literally means 'speckled bread' and is a delicious, moist fruit loaf, often made with tea-soaked dried fruit and traditionally served with butter!",
@@ -92,8 +92,8 @@ export const questions: Question[] = [
     id: 6,
     text: "Laverbread (bara lawr), a Welsh delicacy, is made from what unexpected ingredient?",
     answers: [
-      { text: "A special type of Welsh potato", isCorrect: false },
-      { text: "Purple seaweed", isCorrect: true },
+      { text: "A special Welsh potato", isCorrect: false },
+      { text: "A purple seaweed", isCorrect: true },
       { text: "Finely ground oats", isCorrect: false },
       { text: "Fermented leek tops", isCorrect: false }
     ],
@@ -106,8 +106,8 @@ export const questions: Question[] = [
     text: "While Wales is gaining recognition for its emerging whisky and gin scene, which classic alcoholic beverage has it long been famous for producing?",
     answers: [
       { text: "Sparkling wine", isCorrect: false },
-      { text: "Traditional Welsh ale and bitter", isCorrect: true },
-      { text: "Potent fruit schnapps", isCorrect: false },
+      { text: "Ale and bitter", isCorrect: true },
+      { text: "Potent fruit spirits", isCorrect: false },
       { text: "Cider from apples grown on Snowdon", isCorrect: false }
     ],
     explanation: "Wales has a rich brewing tradition with famous breweries like Brains producing traditional Welsh ales and bitters, enjoyed in pubs across the nation!",
@@ -146,10 +146,10 @@ export const questions: Question[] = [
     id: 9,
     text: "When celebrating Wales' national day, which vibrant flower is proudly pinned to lapels?",
     answers: [
-      { text: "A thorny rose", isCorrect: false },
-      { text: "A spiky thistle", isCorrect: false },
-      { text: "A bright yellow daffodil", isCorrect: true },
-      { text: "A lucky shamrock", isCorrect: false }
+      { text: "A rose", isCorrect: false },
+      { text: "A thistle", isCorrect: false },
+      { text: "A daffodil", isCorrect: true },
+      { text: "A shamrock", isCorrect: false }
     ],
     explanation: "The daffodil (cenhinen Bedr) is the national flower of Wales, famously worn on St. David's Day!",
     multipleCorrect: false,
@@ -172,10 +172,10 @@ export const questions: Question[] = [
     id: 11,
     text: "Which of these items would you most likely see as part of a traditional Welsh national costume, especially for women?",
     answers: [
-      { text: "A flashy kilt and sporran", isCorrect: false },
-      { text: "A tall black hat, warm shawl, and white apron", isCorrect: true },
-      { text: "A Bavarian dirndl with lederhosen", isCorrect: false },
-      { text: "A flowing silk sari", isCorrect: false }
+      { text: "A kilt and sporran", isCorrect: false },
+      { text: "A black hat, shawl and apron", isCorrect: true },
+      { text: "A dirndl with lederhosen", isCorrect: false },
+      { text: "A flowing silk wrap", isCorrect: false }
     ],
     explanation: "The traditional Welsh costume includes a distinctive tall black hat (often called a 'Welsh hat'), a red flannel shawl, and a white apron over a long dress, historically worn by rural women!",
     multipleCorrect: false,
@@ -227,7 +227,7 @@ export const questions: Question[] = [
     text: "What is the highest mountain in Wales, often shrouded in mist and legend?",
     answers: [
       { text: "Ben Nevis", isCorrect: false },
-      { text: "Snowdon (Yr Wyddfa)", isCorrect: true },
+      { text: "Snowdon", isCorrect: true },
       { text: "Scafell Pike", isCorrect: false },
       { text: "Pen y Fan", isCorrect: false }
     ],
@@ -268,7 +268,7 @@ export const questions: Question[] = [
       { text: "The Jurassic Coast", isCorrect: false },
       { text: "The Pembrokeshire Coast", isCorrect: true },
       { text: "The Giant's Causeway", isCorrect: false },
-      { text: "The White Cliffs of Dover", isCorrect: false }
+      { text: "The South Stack, Anglesea", isCorrect: false }
     ],
     explanation: "The Pembrokeshire Coast Path offers some of the most spectacular coastal scenery in Britain, forming the Pembrokeshire Coast National Park!",
     multipleCorrect: false,
@@ -278,10 +278,10 @@ export const questions: Question[] = [
     id: 17,
     text: "What kind of rugged, wild landscape is the Brecon Beacons National Park primarily known for?",
     answers: [
-      { text: "Endless flat farmland", isCorrect: false },
-      { text: "Rolling mountain peaks, expansive moorland, and glistening reservoirs", isCorrect: true },
-      { text: "Dense, impenetrable forests", isCorrect: false },
-      { text: "Arid desert terrain", isCorrect: false }
+      { text: "Rich flat farmland", isCorrect: false },
+      { text: "Mountain peaks, moorland and reservoirs", isCorrect: true },
+      { text: "Dense forests", isCorrect: false },
+      { text: "Arid terrain", isCorrect: false }
     ],
     explanation: "The Brecon Beacons National Park is famous for its dramatic mountain peaks (like Pen y Fan), sweeping moorland, and beautiful glaciated valleys, making it ideal for hiking!",
     multipleCorrect: false,
@@ -334,7 +334,7 @@ export const questions: Question[] = [
     answers: [
       { text: "Goodbye from Wales", isCorrect: false },
       { text: "Welcome to Wales", isCorrect: true },
-      { text: "Made in Wales", isCorrect: false },
+      { text: "Beware of sheep", isCorrect: false },
       { text: "Learn Welsh!", isCorrect: false }
     ],
     explanation: "Croeso i Gymru means 'Welcome to Wales' - a friendly greeting you'll see on road signs as you enter the country!",
@@ -372,9 +372,9 @@ export const questions: Question[] = [
     text: "What does 'Hwyl' (pronounced hoo-eel) most closely represent in Welsh culture, often felt during a good sing-song?",
     answers: [
       { text: "A type of melancholy Welsh folk song", isCorrect: false },
-      { text: "A deep sense of passionate enthusiasm, fun, or zest", isCorrect: true },
+      { text: "A passionate enthusiasm, fun, or zest", isCorrect: true },
       { text: "A traditional Welsh lullaby", isCorrect: false },
-      { text: "A specific type of boat", isCorrect: false }
+      { text: "A type of boat", isCorrect: false }
     ],
     explanation: "'Hwyl' is a uniquely Welsh concept, describing a deep feeling of emotional passion, often associated with powerful singing, communal spirit, or a great atmosphere. You might hear 'Hwyl Fawr!' for a passionate goodbye too!",
     multipleCorrect: false,
@@ -428,7 +428,7 @@ export const questions: Question[] = [
       { text: "The mighty Welsh Black cattle", isCorrect: false },
       { text: "The ubiquitous Welsh Mountain sheep", isCorrect: true },
       { text: "The plump Welsh Pig", isCorrect: false },
-      { text: "The shaggy Highland cow", isCorrect: false }
+      { text: "The shaggy cow", isCorrect: false }
     ],
     explanation: "Wales is famous for its vast numbers of hardy Welsh Mountain sheep, which graze across its hills and mountains, leading to the playful joke!",
     multipleCorrect: false,
@@ -481,8 +481,8 @@ export const questions: Question[] = [
     answers: [
       { text: "Harrods", isCorrect: false },
       { text: "Howells", isCorrect: true },
-      { text: "Selfridges", isCorrect: false },
-      { text: "Harvey Nichols", isCorrect: false }
+      { text: "Jones Brothers", isCorrect: false },
+      { text: "Peter Jones", isCorrect: false }
     ],
     explanation: "Howells was a beloved department store in Cardiff's city centre for over a century, although it has since closed and is now a House of Fraser!",
     multipleCorrect: false,
@@ -494,8 +494,8 @@ export const questions: Question[] = [
     answers: [
       { text: "Freshly made Welsh laverbread", isCorrect: false },
       { text: "A hand-knitted Welsh wool jumper", isCorrect: false },
-      { text: "A full set of scuba diving gear", isCorrect: true },
-      { text: "A genuine Welsh slate coaster", isCorrect: false }
+      { text: "A set of scuba diving gear", isCorrect: true },
+      { text: "A Welsh slate coaster", isCorrect: false }
     ],
     explanation: "Welsh markets are famous for local produce, crafts, and traditional items, but you'd be hard-pressed to find specialized sports equipment like scuba gear there!",
     multipleCorrect: false,
