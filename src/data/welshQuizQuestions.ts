@@ -64,7 +64,7 @@ export const questions: Question[] = [
   },
   {
     id: 4,
-    text: "If a Welsh person offers you a piece of 'bara brith,' what are they sharing?",
+    text: "If a Welsh person offers you 'bara brith,' what are they sharing?",
     answers: [
       { text: "A special Welsh lamb sausage", isCorrect: false },
       { text: "A secret Welsh potion", isCorrect: false },
