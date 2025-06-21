@@ -25,12 +25,12 @@ export const questions: Question[] = [
   // Food & Drink (Bwyd a Diod)
   {
     id: 1,
-    text: "When offered a bowl of 'cawl' in Wales, what hearty traditional dish are you about to enjoy?",
+    text: "When offered 'cawl' in Wales, what traditional food are you about to enjoy?",
     answers: [
-      { text: "A traditional Welsh stew", isCorrect: true },
-      { text: "A type of Welsh sweet bread", isCorrect: false },
-      { text: "A Welsh musical instrument", isCorrect: false },
-      { text: "A Welsh doner kebab", isCorrect: false }
+      { text: "A Welsh stew", isCorrect: true },
+      { text: "A Welsh sweet bread", isCorrect: false },
+      { text: "A Welsh breakfast cereal", isCorrect: false },
+      { text: "A Welsh desert", isCorrect: false }
     ],
     explanation: "Cawl is Wales' national dish - a hearty stew traditionally made with lamb or beef and seasonal vegetables, perfect on a chilly day!",
     multipleCorrect: false,
@@ -64,10 +64,10 @@ export const questions: Question[] = [
   },
   {
     id: 4,
-    text: "If a kind Welsh person offers you a slice of 'bara brith,' what delicious treat are they sharing?",
+    text: "If a Welsh person offers you a piece of 'bara brith,' what are they sharing?",
     answers: [
       { text: "A special Welsh lamb sausage", isCorrect: false },
-      { text: "A secret Welsh spell book", isCorrect: false },
+      { text: "A secret Welsh potion", isCorrect: false },
       { text: "A fruit loaf", isCorrect: true },
       { text: "A potent homemade cider", isCorrect: false }
     ],
@@ -92,9 +92,9 @@ export const questions: Question[] = [
     id: 6,
     text: "Laverbread (bara lawr), a Welsh delicacy, is made from what unexpected ingredient?",
     answers: [
-      { text: "A special Welsh potato", isCorrect: false },
-      { text: "A purple seaweed", isCorrect: true },
-      { text: "Finely ground oats", isCorrect: false },
+      { text: "Potato", isCorrect: false },
+      { text: "Purple seaweed", isCorrect: true },
+      { text: "Mountain grass", isCorrect: false },
       { text: "Fermented leek tops", isCorrect: false }
     ],
     explanation: "Laverbread is made from laver seaweed, boiled and minced into a dark green puree, often eaten fried with bacon and cockles for breakfast!",
@@ -108,7 +108,7 @@ export const questions: Question[] = [
       { text: "Sparkling wine", isCorrect: false },
       { text: "Ale and bitter", isCorrect: true },
       { text: "Potent fruit spirits", isCorrect: false },
-      { text: "Cider from apples grown on Snowdon", isCorrect: false }
+      { text: "Snowden apple cider", isCorrect: false }
     ],
     explanation: "Wales has a rich brewing tradition with famous breweries like Brains producing traditional Welsh ales and bitters, enjoyed in pubs across the nation!",
     multipleCorrect: false,
@@ -120,7 +120,7 @@ export const questions: Question[] = [
     answers: [
       { text: "Lamb", isCorrect: false },
       { text: "Potato", isCorrect: false },
-      { text: "Pineapple", isCorrect: true },
+      { text: "Hops", isCorrect: true },
       { text: "Swede and onion", isCorrect: false }
     ],
     explanation: "An Oggie (similar to a Cornish Pasty) is a traditional Welsh savoury pastry, usually filled with lamb, potato, swede, and onion. Pineapple would be a very surprising and untraditional addition!",
@@ -135,7 +135,7 @@ export const questions: Question[] = [
     answers: [
       { text: "The Welsh Castle Conundrum", isCorrect: false },
       { text: "The Eisteddfod", isCorrect: true },
-      { text: "The Great Welsh Sheep Shearing Championships", isCorrect: false },
+      { text: "The Welsh Sheep Shearing Championships", isCorrect: false },
       { text: "The Daffodil Derby", isCorrect: false }
     ],
     explanation: "The Eisteddfod is a major annual festival of Welsh poetry, music, dance, and drama, with thousands competing and attending!",
@@ -144,7 +144,7 @@ export const questions: Question[] = [
   },
   {
     id: 9,
-    text: "When celebrating Wales' national day, which vibrant flower is proudly pinned to lapels?",
+    text: "When celebrating Wales' national day, which flower is proudly pinned to lapels?",
     answers: [
       { text: "A rose", isCorrect: false },
       { text: "A thistle", isCorrect: false },
@@ -187,7 +187,7 @@ export const questions: Question[] = [
     answers: [
       { text: "Belting out a rousing hymn with full gusto", isCorrect: false },
       { text: "Performing a powerful choral piece in a rugby stadium", isCorrect: false },
-      { text: "Whispering quietly in a monotone for a talent show audition", isCorrect: true },
+      { text: "Whispering in a monotone for a talent show audition", isCorrect: true },
       { text: "Winning a major Eisteddfod prize with their harmonious sound", isCorrect: false }
     ],
     explanation: "Welsh choirs are famous for their powerful, passionate, and harmonious singing – whispering isn't their style! They're known for their big, impactful sound.",
@@ -200,7 +200,7 @@ export const questions: Question[] = [
     answers: [
       { text: "Shinty", isCorrect: false },
       { text: "Bandy", isCorrect: true },
-      { text: "Hurling", isCorrect: false },
+      { text: "Rugby", isCorrect: false },
       { text: "Quidditch", isCorrect: false }
     ],
     explanation: "Bandy was a traditional Welsh ball game played on ice or land. Cnapan was another ancient, often violent, medieval Welsh sport resembling a mass rugby game!",
@@ -276,7 +276,7 @@ export const questions: Question[] = [
   },
   {
     id: 17,
-    text: "What kind of rugged, wild landscape is the Brecon Beacons National Park primarily known for?",
+    text: "What kind of rugged landscape is the Brecon Beacons National Park primarily known for?",
     answers: [
       { text: "Rich flat farmland", isCorrect: false },
       { text: "Mountain peaks, moorland and reservoirs", isCorrect: true },
@@ -335,7 +335,7 @@ export const questions: Question[] = [
       { text: "Goodbye from Wales", isCorrect: false },
       { text: "Welcome to Wales", isCorrect: true },
       { text: "Beware of sheep", isCorrect: false },
-      { text: "Learn Welsh!", isCorrect: false }
+      { text: "Time to learn Welsh", isCorrect: false }
     ],
     explanation: "Croeso i Gymru means 'Welcome to Wales' - a friendly greeting you'll see on road signs as you enter the country!",
     multipleCorrect: false,
@@ -356,7 +356,7 @@ export const questions: Question[] = [
   },
   {
     id: 32,
-    text: "When a Welsh person says 'diolch', what common courtesy are they extending?",
+    text: "When a Welsh person says 'diolch', what are they saying?",
     answers: [
       { text: "They're asking for the bill", isCorrect: false },
       { text: "They're saying 'thank you'", isCorrect: true },
@@ -382,12 +382,12 @@ export const questions: Question[] = [
   },
   {
     id: 34,
-    text: "Which of these terms is a common, often affectionate, way you might hear a Welsh person address someone, especially in the South?",
+    text: "Which of these terms is a common, often affectionate, way a Welsh person address someone, especially in the South?",
     answers: [
       { text: "Chum", isCorrect: false },
       { text: "Matey", isCorrect: false },
       { text: "Boyo", isCorrect: true },
-      { text: "Old Bean", isCorrect: false }
+      { text: "Hello Shaun", isCorrect: false }
     ],
     explanation: "'Boyo' is a colloquial and often endearing term for a man or boy, particularly associated with South Wales, used much like 'mate' or 'pal'.",
     multipleCorrect: false,
@@ -410,12 +410,12 @@ export const questions: Question[] = [
   },
   {
     id: 23,
-    text: "Which distinctive, colourful seabird with a clown-like beak is a common sight on Welsh coastal cliffs, particularly on its islands?",
+    text: "Which distinctive seabird is a common sight on Welsh coastal cliffs, particularly on its islands?",
     answers: [
-      { text: "A fluffy penguin", isCorrect: false },
-      { text: "A charming puffin", isCorrect: true },
-      { text: "A graceful flamingo", isCorrect: false },
-      { text: "A rather tall ostrich", isCorrect: false }
+      { text: "A penguin", isCorrect: false },
+      { text: "A puffin", isCorrect: true },
+      { text: "A flamingo", isCorrect: false },
+      { text: "An ostrich", isCorrect: false }
     ],
     explanation: "Puffins nest in large colonies on Welsh coastal cliffs, particularly on islands like Skomer and Skokholm, returning each spring to breed!",
     multipleCorrect: false,
@@ -426,7 +426,7 @@ export const questions: Question[] = [
     text: "What common farm animal is so iconic in Wales that it's often jokingly said to outnumber the human population?",
     answers: [
       { text: "The mighty Welsh Black cattle", isCorrect: false },
-      { text: "The ubiquitous Welsh Mountain sheep", isCorrect: true },
+      { text: "The Welsh Mountain sheep", isCorrect: true },
       { text: "The plump Welsh Pig", isCorrect: false },
       { text: "The shaggy cow", isCorrect: false }
     ],
@@ -492,7 +492,7 @@ export const questions: Question[] = [
     id: 36,
     text: "Which of these items would you be least likely to find for sale at a traditional Welsh market stall?",
     answers: [
-      { text: "Freshly made Welsh laverbread", isCorrect: false },
+      { text: "Welsh laverbread", isCorrect: false },
       { text: "A hand-knitted Welsh wool jumper", isCorrect: false },
       { text: "A set of scuba diving gear", isCorrect: true },
       { text: "A Welsh slate coaster", isCorrect: false }
