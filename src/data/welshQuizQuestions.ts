@@ -123,7 +123,7 @@ export const questions: Question[] = [
       { text: "Hops", isCorrect: true },
       { text: "Swede and onion", isCorrect: false }
     ],
-    explanation: "An Oggie (similar to a Cornish Pasty) is a traditional Welsh savoury pastry, usually filled with lamb, potato, swede, and onion. Pineapple would be a very surprising and untraditional addition!",
+    explanation: "An Oggie (similar to a Cornish Pasty) is a traditional Welsh savoury pastry, usually filled with lamb, potato, swede, and onion. Hops would be a very surprising and untraditional addition!",
     multipleCorrect: false,
     section: "food & drink"
   },
